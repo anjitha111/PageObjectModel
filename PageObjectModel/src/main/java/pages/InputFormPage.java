@@ -28,5 +28,7 @@ public class InputFormPage {
 	{
 		WebElement element=driver.findElement(show_message);
 		element.click();
+		System.out.println("Welcome");
+		
 	}
 }
