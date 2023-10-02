@@ -18,5 +18,6 @@ public class InputFormTest extends BaseClass {
 		inputformpage.inputMessageInMessageField("Welcome");
 		inputformpage.clickOnMessageButton();
 	}
+	
 
 }
