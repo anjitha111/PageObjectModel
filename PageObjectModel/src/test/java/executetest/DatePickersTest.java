@@ -16,6 +16,9 @@ public class DatePickersTest extends BaseClass {
 
 		datepickerspage = new DatePickersPage(driver);
 		datepickerspage.clickOnDatePickers();
+		datepickerspage.selectDate("15-08-2000");
+		
+		//datepickerspage.showDateButtonfunctionality();
 
 	}
 

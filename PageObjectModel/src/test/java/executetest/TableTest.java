@@ -1,5 +1,6 @@
 package executetest;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import basepackage.BaseClass;
@@ -10,11 +11,23 @@ public class TableTest extends BaseClass {
 
 	@Test
 
-	public void verifyLogoDisplayed() {
-
-		tablepage = new TablePage(driver);
-		System.out.println(driver.getCurrentUrl());
-
+	public void verifyClickOnTableLink()
+	{
+		tablepage=new TablePage(driver);
+		tablepage.clickOnTableLink(); // Will show error indicating the webelement is null.
+		
+	}
+	@Test
+	public void verifyTablePageElements()
+	{
+		tablepage.getNameOfFirstPerson();
+		String expectedname="Tiger Nixon";
+	
+		tablepage.printAllNames();
+		String office_name=tablepage.getOfficeOfPerson("Colleen Hurst");
+		System.out.println("Office is "+office_name);
+		Assert.assertEquals(tablepage.getNameOfFirstPerson(),expectedname,"Names are not matching.");
+		
 	}
 
 }
